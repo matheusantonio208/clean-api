@@ -1,0 +1,5 @@
+☐ Criar Interface HttpResponse presentation > protocols > http.ts com `statusCode: number, body: any`
+☐ Criar Interface HttpRequest presentation > protocols > http.ts com `body?: any`
+
+☐ Criar Erro Personalizado presentation > errors > missing-param-error.ts
+☐ Refatorar retorno de erro, criando um helper em presentation > helpers > http-helper.ts
