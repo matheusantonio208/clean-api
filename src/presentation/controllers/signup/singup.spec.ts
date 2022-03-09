@@ -1,8 +1,6 @@
 import { SignUpController } from './signup'
-import { MissingParamError, InvalidParamError, ServerError } from '../errors'
-import { EmailValidator } from '../protocols'
-import { AccountModel } from '../../domain/models/account'
-import { AddAccount, AddAccountModel } from '../../domain/usecases/add-account'
+import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
+import { EmailValidator, AccountModel, AddAccount, AddAccountModel } from './signup-protocols'
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
@@ -16,7 +14,7 @@ const makeEmailValidator = (): EmailValidator => {
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
-    add (account: AddAccountModel): AccountModel {
+    add (account: AddAccountModel): AccountModel { 
       const fakeAccount = {
         id: 'valid_id',
         name: 'valid_name',
@@ -149,7 +147,6 @@ describe('SingUp Controller', () => {
         passwordConfirmation: 'any_password'
       }
     }
-    
     sut.handle(httpRequest)
     expect(isValidSpy).toHaveBeenCalledWith('any_email')
   })
