@@ -6,5 +6,10 @@
         "esModuleInterop": true,
         "allowJs": true   ,
         "strict": false
-    }
+    },
+    "noLib": true,
+    "noResolve": true,
+    "declaration": false,
+    "noEmitOnError": false,
+    "composite": false,
 }
