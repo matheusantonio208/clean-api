@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "..\\profrotas-app\\.expo": true,
+    "..\\profrotas-app\\node_modules": true
+  }
+}
