@@ -42,7 +42,7 @@ const makeSut = (): SutTypes => {
     sut,
     emailValidatorStub,
     addAccountStub
-  }
+  } 
 }
 
 describe('SingUp Controller', () => {
